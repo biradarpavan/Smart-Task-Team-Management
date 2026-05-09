@@ -90,13 +90,11 @@ io.on('connection', (socket) => {
   });
 });
 
-// Export the app for Vercel serverless functions
+// Export the app (useful for testing or serverless)
 module.exports = app;
 
-// Start the server only if not running on Vercel
-if (process.env.NODE_ENV !== 'production') {
-  const PORT = process.env.PORT || 5000;
-  server.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-  });
-}
+// Start the server
+const PORT = process.env.PORT || 5000;
+server.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server is running on port ${PORT}`);
+});

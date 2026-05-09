@@ -49,9 +49,7 @@ cd ../frontend
 npm install
 # Create a .env file with VITE_API_URL=http://localhost:5000
 npm run dev
-```
-
----
+....
 
 ## Humanistic Design Principles
 This project adheres to modern design standards:
